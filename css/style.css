@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+
+/* --- Reset --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* --- Base --- */
+
+body {
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    background-color: #FFFFFF;
+    color: #000000;
+    line-height: 1.6;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+/* --- Header & Nav --- */
+
+header {
+    border-bottom: 1px solid #000000;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- Main --- */
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Hero --- */
+
+#hero {
+    padding: 4rem 0;
+}
+
+/* --- Home intro --- */
+
+#home-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.home-intro-img {
+    width: 45%;
+    flex-shrink: 0;
+}
+
+.home-intro-img img {
+    display: block;
+    width: 100%;
+}
+
+.home-intro-caption {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #9E9E9E;
+}
+
+.home-intro-text {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* max-height impostato via JS in base all'altezza dell'immagine */
+}
+
+.home-intro-text h2 {
+    color: #FF0000;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.home-intro-aside {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #9E9E9E;
+}
+
+.home-intro-aside h3 {
+    font-size: 0.65rem;
+    color: #565656;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.home-intro-aside p {
+    font-size: 0.65rem;
+    color: #565656;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    #home-intro {
+        flex-direction: column;
+    }
+
+    .home-intro-img {
+        width: 100%;
+    }
+}
+
+/* --- Portfolio grid --- */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-grid article {
+    border: 1px solid #000000;
+}
+
+.portfolio-grid article a {
+    display: block;
+    color: #000000;
+}
+
+.portfolio-grid article a:hover {
+    color: #FF0000;
+}
+
+.portfolio-grid article img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.portfolio-grid article h2 {
+    padding: 0.75rem 1rem;
+}
+
+/* --- Bio --- */
+
+#bio h1 {
+    margin-bottom: 1.5rem;
+}
+
+#bio h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#bio ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+#bio ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Lavoro immagine principale --- */
+
+.lavoro-detail img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Bio design --- */
+
+#bio-design {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #000000;
+}
+
+#bio-design h2 {
+    margin-bottom: 1.5rem;
+}
+
+.bio-design-body {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bio-design-text {
+    flex: 0 0 auto;
+}
+
+.bio-design-star {
+    flex: 1;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.bio-design-text {
+    flex: 1;
+    max-width: 720px;
+}
+
+.bio-design-text p {
+    margin-bottom: 1rem;
+}
+
+/* --- Bio foto --- */
+
+.bio-foto {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.bio-foto img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* --- Contatti --- */
+
+.contatti-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.contatti-content {
+    flex: 0 0 auto;
+    min-width: 420px;
+}
+
+.contatti-img {
+    height: 75vh;
+    width: auto;
+    flex: 1;
+    object-fit: contain;
+    object-position: right top;
+    margin-left: auto;
+    display: block;
+}
+
+#contatti h1 {
+    margin-bottom: 1.5rem;
+}
+
+#contatti > p {
+    margin-bottom: 2rem;
+    color: #565656;
+}
+
+.contatti-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.contatti-social a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #000000;
+}
+
+.contatti-social a:hover {
+    color: #FF0000;
+}
+
+.contatti-social svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+#contact-form label {
+    font-style: italic;
+    color: #565656;
+}
+
+#contact-form input,
+#contact-form textarea {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 1rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#contact-form button:hover {
+    background-color: #FF0000;
+}
+
+/* --- Lavoro detail --- */
+
+.lavoro-detail h1 {
+    margin-bottom: 1.5rem;
+}
+
+.lavoro-detail p {
+    color: #565656;
+    margin-bottom: 1rem;
+}
+
+.lavoro-detail .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-style: italic;
+    color: #9E9E9E;
+}
+
+.lavoro-detail .back-link:hover {
+    color: #FF0000;
+}
+
+/* --- Footer --- */
+
+footer {
+    border-top: 1px solid #000000;
+    padding: 1rem 2rem;
+    color: #9E9E9E;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #hero {
+        padding: 2rem 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contatti-layout {
+        flex-direction: column;
+    }
+
+    .contatti-img {
+        width: 100%;
+    }
+}

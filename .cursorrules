@@ -1,0 +1,104 @@
+# Regole del Progetto
+
+## Tipologia di progetto
+- Realizza un sito portfolio personale statico per una designer
+- Focus su chiarezza, qualità visiva e semplicità
+- Progetto pensato per valutazione accademica
+
+## Obiettivi
+- Mostrare i lavori di design in modo chiaro
+- Comunicare l’identità personale come designer
+- Seguire uno stile visivo coerente e preciso
+
+## Stack tecnologico
+- Usa HTML5 per la struttura
+- Usa CSS3 per lo stile
+- Usa solo JavaScript vanilla
+- Usa Google Fonts per la tipografia
+- Non introdurre framework o librerie esterne
+
+## Struttura dei file
+- Segui esattamente questa struttura:
+
+portfolio/
+- index.html
+- bio.html
+- portfolio.html
+  - lavoro-1.html
+  - lavoro-2.html
+  - lavoro-3.html
+- contatti.html
+- css/
+  - style.css
+- js/
+  - main.js
+- img/
+- README.md
+- CHANGELOG.md
+
+- Non rinominare né ristrutturare i file
+- Mantieni le risorse organizzate nelle rispettive cartelle
+
+## Regole HTML
+- Usa elementi HTML semantici
+- Mantieni la struttura pulita e leggibile
+- Evita annidamenti non necessari
+- Garantisci i fondamentali di accessibilità (alt, label, ecc.)
+
+## Regole CSS
+- Usa un solo foglio di stile (`style.css`)
+- Mantieni gli stili modulari e ben organizzati
+- Evita stili inline
+- Preferisci classi CSS
+- Mantieni spaziature e layout coerenti
+
+## Regole JavaScript
+- Mantieni JavaScript minimo e con uno scopo preciso
+- Non sovra-ingegnerizzare le interazioni
+- Scrivi codice pulito e leggibile
+
+## Sistema di design
+
+### Colori
+- Usa solo la palette definita:
+
+Primari:
+- #FFFFFF (bianco)
+- #000000 (nero)
+- #FF0000 (rosso)
+- #0000FF (blu)
+
+Secondari:
+- #565656 (grigio 1)
+- #9E9E9E (grigio 2)
+
+- Non introdurre colori aggiuntivi
+
+### Tipografia
+- Usa "Fragment Mono" da Google Fonts
+- Usa solo le varianti Regular e Italic
+- Mantieni la tipografia coerente su tutte le pagine
+
+## Layout & UI
+- Mantieni il layout minimale e pulito
+- Dai priorità a leggibilità e gerarchia
+- Garantisci coerenza visiva tra tutte le pagine
+
+## Sezione Portfolio
+- Mostra tutti i lavori in `portfolio.html`
+- Ogni lavoro deve avere una pagina dedicata
+- Mantieni una presentazione coerente tra tutti i progetti
+
+## Contenuti
+- Mantieni i testi concisi e professionali
+- Dai priorità alla presentazione del design rispetto a descrizioni lunghe
+
+## Performance
+- Mantieni il sito leggero
+- Ottimizza le immagini quando possibile
+- Evita script non necessari
+
+## Regole generali
+- Preferisci semplicità alla complessità
+- Non aggiungere funzionalità non richieste dal progetto
+- Mantieni il codice manutenibile e leggibile
