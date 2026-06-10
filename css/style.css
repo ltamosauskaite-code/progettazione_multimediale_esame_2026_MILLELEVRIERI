@@ -531,69 +531,7 @@ main {
     filter: grayscale(0%);
 }
 
-/* --- Process (landing) --- */
-
-#process-home {
-    background: #000000;
-    color: #FFFFFF;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 5rem 0;
-}
-
-.process-home-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.section-header-dark .section-label {
-    color: #565656;
-}
-
-.process-home-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid #565656;
-    margin-top: 2rem;
-}
-
-.process-home-steps li {
-    padding: 2rem 1.5rem 0 0;
-    border-right: 1px solid #565656;
-}
-
-.process-home-steps li:last-child {
-    border-right: none;
-    padding-right: 0;
-}
-
-.process-home-steps li:first-child {
-    padding-left: 0;
-}
-
-.step-num-home {
-    font-family: 'BillaMount', sans-serif;
-    font-size: 72px;
-    line-height: 1;
-    color: #FFFFFF;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.process-home-steps h3 {
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-    color: #FFFFFF;
-}
-
-.process-home-steps p {
-    font-size: 0.68rem;
-    color: #9E9E9E;
-    line-height: 1.6;
-}
+.pro
 
 /* --- CTA home --- */
 
