@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <span class="header-logo">Millelevrieri</span>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -16,39 +17,61 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
     <main>
-        <section id="bio">
-            <h1>Chi sono</h1>
-            <p>Sono una ragazza lituana che ha scelto di chiamare casa Roma, dopo aver trascorso molti anni in Friuli. Questo percorso mi ha dato uno sguardo aperto e ibrido, fatto di culture, lingue e sensibilità diverse che influenzano profondamente il mio modo di progettare.</p>
-            <p>Sono una designer dei diversi media: mi muovo tra digitale e visivo con curiosità, cercando sempre soluzioni creative e mai scontate. Mi interessa esplorare, sperimentare e trovare un linguaggio che sia autentico, evitando il più possibile la banalità.</p>
-            <p>Ho 21 anni e sono ancora in formazione. Studio, osservo e costruisco il mio percorso passo dopo passo, con l'obiettivo di crescere come designer e come persona, trasformando ogni esperienza in un'opportunità creativa.</p>
-        </section>
-        <section id="bio-foto-section">
-            <div class="bio-foto">
-                <img src="img/bio-1.png" alt="Liepa">
-                <img src="img/bio-2.png" alt="Liepa">
-                <img src="img/bio-3.png" alt="Liepa">
-            </div>
-        </section>
-        <section id="bio-design">
-            <h2>Il mio design</h2>
-            <div class="bio-design-body">
-                <div class="bio-design-text">
-                    <p>Il mio design non è decorazione, è un cortocircuito visivo. La mia ossessione è una sola: catturare la tua attenzione e costringere lo sguardo a fermarsi. Non mi accontento di creare immagini che vengano "viste"; voglio immagini che ti entrino dentro, che ti forzino a confrontarti con la mia visione del mondo.</p>
-                    <p>Tutto parte dalla realtà, quella vera e cruda. Parto da fotografie scattate da me o dagli amici, istanti banali presi dalla nostra quotidianità, momenti che spesso finiscono dimenticati in un rullino. È lì che intervengo. Il mio lavoro è dare a questi scatti una seconda vita, una vita violenta e distorta.</p>
-                    <p>Uso colori saturi, primari – il rosso, il blu, il giallo – che urlano visivamente, rompendo ogni equilibrio formale. Non cerco l'estetica perfetta, cerco l'energia grezza. Trasformo il frammento di una giornata comune in un'opera d'arte fuori dagli schemi, un'allucinazione che rompe le barriere tra la mia testa e il tuo occhio.</p>
-                    <p>Se guardi i miei lavori, non stai solo guardando della grafica: stai entrando nel mio modo di vedere le cose. È un atto di possesso visivo, un modo per trasformare l'ordinario in qualcosa che graffia e che rimane impresso.</p>
-                </div>
-                <svg class="bio-design-star" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <polygon points="50,2 61,35 97,35 68,57 79,91 50,70 21,91 32,57 3,35 39,35" fill="#FF0000"/>
-                </svg>
+        <section class="bio-quote">
+            <div class="bio-quote-wrapper">
+                <p class="bio-quote-top">Design come</p>
+                <p class="bio-quote-bottom">cortocircuito visivo.</p>
+                <img class="bio-quote-dog" src="img/whippet.png" alt="" aria-hidden="true">
             </div>
         </section>
 
+        <section id="bio">
+            <h1>Chi sono</h1>
+            <div class="bio-intro">
+                <ul class="bio-info-list">
+                    <li>Roma</li>
+                    <li>Lituania</li>
+                    <li>21 anni</li>
+                    <li>Design visivo</li>
+                    <li>Identità</li>
+                    <li>Fotografia</li>
+                </ul>
+                <div class="bio-intro-text">
+                    <p>Sono una ragazza lituana che ha scelto di chiamare casa Roma, dopo aver trascorso molti anni in Friuli. Questo percorso mi ha dato uno sguardo aperto e ibrido, fatto di culture, lingue e sensibilità diverse che influenzano profondamente il mio modo di progettare.</p>
+                    <p>Sono una designer dei diversi media: mi muovo tra digitale e visivo con curiosità, cercando sempre soluzioni creative e mai scontate. Mi interessa esplorare, sperimentare e trovare un linguaggio che sia autentico, evitando il più possibile la banalità.</p>
+                    <p>Ho 21 anni e sono ancora in formazione. Studio, osservo e costruisco il mio percorso passo dopo passo, con l'obiettivo di crescere come designer e come persona, trasformando ogni esperienza in un'opportunità creativa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bio-foto-section">
+            <div class="bio-foto">
+                <img class="bio-foto-main" src="img/bio-1.png" alt="Liepa">
+                <div class="bio-foto-side">
+                    <img src="img/bio-2.png" alt="Liepa">
+                    <img src="img/bio-3.png" alt="Liepa">
+                </div>
+            </div>
+        </section>
+
+        <section id="bio-design">
+            <div class="bio-design-header">
+                <svg class="bio-design-star" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polygon points="50,2 61,35 97,35 68,57 79,91 50,70 21,91 32,57 3,35 39,35" fill="#FF0000"/>
+                </svg>
+                <h2>Il mio design</h2>
+            </div>
+            <div class="bio-design-text">
+                <p>Il mio design non è decorazione, è un cortocircuito visivo. La mia ossessione è una sola: catturare la tua attenzione e costringere lo sguardo a fermarsi. Non mi accontento di creare immagini che vengano "viste"; voglio immagini che ti entrino dentro, che ti forzino a confrontarti con la mia visione del mondo.</p>
+                <p>Uso colori saturi, primari — il rosso, il blu — che urlano visivamente, rompendo ogni equilibrio formale. Non cerco l'estetica perfetta, cerco l'energia grezza. Se guardi i miei lavori, non stai solo guardando della grafica: stai entrando nel mio modo di vedere le cose.</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <p><p>&copy; 2026</p>copy; 2026 Liepa Tamosauskaite</p>
+        <p>&copy; 2026 Liepa Tamosauskaite</p>
     </footer>
     <script src="js/main.js"></script>
 </body>
