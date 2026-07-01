@@ -11,6 +11,7 @@
     <meta property="og:url" content="lavoro-1.html">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script>!function(){if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}();</script>
 </head>
 <body>
     <header>
@@ -23,6 +24,7 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <button type="button" class="theme-toggle" aria-label="Attiva tema scuro" aria-pressed="false">Dark</button>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
     <main>
@@ -32,13 +34,13 @@
                 <div class="lavoro-carousel carousel" aria-label="Galleria progetto">
                     <div class="carousel-track">
                         <figure class="carousel-slide is-active">
-                            <img src="img/lavoro-1.png" alt="La mia città — composizione finale">
+                            <img src="img/lavoro-1.png" alt="La mia città — versione a colori">
                         </figure>
                         <figure class="carousel-slide">
-                            <img src="img/bea-vilnius.png" alt="Scatto originale a Vilnius">
+                            <img src="img/lavoro-1.png" alt="La mia città — versione negativa" class="lavoro-variant-invert">
                         </figure>
                         <figure class="carousel-slide">
-                            <img src="img/grey.png" alt="Dettaglio composizione e texture">
+                            <img src="img/lavoro-1.png" alt="La mia città — versione bianco e nero" class="lavoro-variant-bw">
                         </figure>
                     </div>
                     <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>

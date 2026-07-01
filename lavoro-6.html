@@ -11,6 +11,7 @@
     <meta property="og:url" content="lavoro-6.html">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script>!function(){if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}();</script>
 </head>
 <body>
     <header>
@@ -23,13 +24,29 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <button type="button" class="theme-toggle" aria-label="Attiva tema scuro" aria-pressed="false">Dark</button>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
     <main>
         <section class="lavoro-detail">
             <h1>Live Meat</h1>
             <div class="lavoro-content">
-                <img src="img/live-meat.png" alt="Live Meat">
+                <div class="lavoro-carousel carousel" aria-label="Galleria progetto">
+                    <div class="carousel-track">
+                        <figure class="carousel-slide is-active">
+                            <img src="img/live-meat.png" alt="Live Meat — versione a colori">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="img/live-meat.png" alt="Live Meat — versione negativa" class="lavoro-variant-invert">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="img/live-meat.png" alt="Live Meat — versione bianco e nero" class="lavoro-variant-bw">
+                        </figure>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Slide successiva">→</button>
+                    <div class="carousel-dots" role="tablist" aria-label="Seleziona slide"></div>
+                </div>
                 <div class="lavoro-desc">
                     <span class="desc-label">Descrizione</span>
                     <p>Ho preso un'immagine fotografica di un volto — la cosa più umana possibile — e l'ho decostruita attraverso algoritmi e pattern grafici: linee orizzontali e mezzatinta granulosa. Il risultato è una figura che è allo stesso tempo presente e cancellata.</p>

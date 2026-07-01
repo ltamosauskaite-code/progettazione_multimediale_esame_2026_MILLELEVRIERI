@@ -11,6 +11,7 @@
     <meta property="og:url" content="index.html">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script>!function(){if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}();</script>
 </head>
 <body>
     <header>
@@ -23,6 +24,7 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <button type="button" class="theme-toggle" aria-label="Attiva tema scuro" aria-pressed="false">Dark</button>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
     <section id="video-intro">
@@ -35,57 +37,6 @@
         <span class="video-title video-title-black">Millelevrieri</span>
     </section>
     <main>
-        <section id="hero-carousel" class="carousel-home" aria-label="Progetti in evidenza">
-            <div class="section-header">
-                <span class="section-label">Progetti in evidenza</span>
-                <div class="carousel-toolbar">
-                    <span class="carousel-counter" id="carousel-counter" aria-live="polite">01 / 03</span>
-                    <div class="carousel-dots" role="tablist" aria-label="Seleziona slide"></div>
-                    <div class="carousel-nav">
-                        <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>
-                        <button type="button" class="carousel-btn carousel-next" aria-label="Slide successiva">→</button>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel featured-carousel">
-                <div class="carousel-track">
-                    <article class="carousel-slide featured-item is-active">
-                        <div class="featured-item-meta">
-                            <span class="featured-item-num">01</span>
-                            <h2 class="featured-item-title">Mirame</h2>
-                            <p class="featured-item-desc">Il voyeurismo come pattern visivo ossessivo — testo ripetuto, stratificato, che invade lo sguardo.</p>
-                            <a href="lavoro-2.html" class="featured-item-link">Vedi il lavoro →</a>
-                        </div>
-                        <div class="carousel-media featured-item-img-wrap">
-                            <img class="carousel-hero-img" src="img/lavoro-2.png" alt="Mirame — composizione voyeuristica">
-                        </div>
-                    </article>
-                    <article class="carousel-slide featured-item">
-                        <div class="featured-item-meta">
-                            <span class="featured-item-num">02</span>
-                            <h2 class="featured-item-title">Ferma il Tempo</h2>
-                            <p class="featured-item-desc">Locandina per evento musicale — tipografia manuale, fotografia e illustrazione in equilibrio.</p>
-                            <a href="lavoro-5.html" class="featured-item-link">Vedi il lavoro →</a>
-                        </div>
-                        <div class="carousel-media featured-item-img-wrap">
-                            <img class="carousel-hero-img" src="img/ferma-il-tempo.png" alt="Ferma il Tempo — locandina evento">
-                        </div>
-                    </article>
-                    <article class="carousel-slide featured-item">
-                        <div class="featured-item-meta">
-                            <span class="featured-item-num">03</span>
-                            <h2 class="featured-item-title">Live Meat</h2>
-                            <p class="featured-item-desc">Un volto decostruito tra algoritmi e mezzatinta — presenza e cancellazione nello stesso frame.</p>
-                            <a href="lavoro-6.html" class="featured-item-link">Vedi il lavoro →</a>
-                        </div>
-                        <div class="carousel-media featured-item-img-wrap">
-                            <img class="carousel-hero-img" src="img/live-meat.png" alt="Live Meat — volto decostruito">
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <section id="statement">
             <div class="statement-left">
                 <p class="statement-role">Designer visiva</p>

@@ -11,6 +11,7 @@
     <meta property="og:url" content="lavoro-4.html">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script>!function(){if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}();</script>
 </head>
 <body>
     <header>
@@ -23,16 +24,40 @@
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
+        <button type="button" class="theme-toggle" aria-label="Attiva tema scuro" aria-pressed="false">Dark</button>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
     <main>
         <section class="lavoro-detail">
             <h1>Pietà</h1>
             <div class="lavoro-content">
-                <div class="video-player">
-                    <div class="vimeo-wrap">
-                        <iframe src="https://player.vimeo.com/video/1200232513?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="pietà"></iframe>
+                <div class="lavoro-carousel carousel lavoro-carousel--video" aria-label="Galleria progetto">
+                    <div class="carousel-track">
+                        <figure class="carousel-slide is-active">
+                            <div class="lavoro-carousel-media">
+                                <div class="vimeo-wrap">
+                                    <iframe src="https://player.vimeo.com/video/1200232513?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Pietà — versione a colori"></iframe>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="carousel-slide">
+                            <div class="lavoro-carousel-media lavoro-variant-invert">
+                                <div class="vimeo-wrap">
+                                    <iframe src="https://player.vimeo.com/video/1200232513?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Pietà — versione negativa"></iframe>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="carousel-slide">
+                            <div class="lavoro-carousel-media lavoro-variant-bw">
+                                <div class="vimeo-wrap">
+                                    <iframe src="https://player.vimeo.com/video/1200232513?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Pietà — versione bianco e nero"></iframe>
+                                </div>
+                            </div>
+                        </figure>
                     </div>
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Slide successiva">→</button>
+                    <div class="carousel-dots" role="tablist" aria-label="Seleziona slide"></div>
                 </div>
                 <div class="lavoro-desc">
                     <span class="desc-label">Descrizione</span>

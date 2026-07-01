@@ -102,6 +102,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const videoIntro = document.getElementById('video-intro');
 
+    /* --- Dark mode toggle --- */
+    (function initThemeToggle() {
+        const root = document.documentElement;
+        const toggle = document.querySelector('.theme-toggle');
+        if (!toggle) return;
+
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+            if (isDark) {
+                root.setAttribute('data-theme', 'dark');
+            } else {
+                root.removeAttribute('data-theme');
+            }
+            toggle.setAttribute('aria-pressed', isDark);
+            toggle.setAttribute('aria-label', isDark ? 'Attiva tema chiaro' : 'Attiva tema scuro');
+            toggle.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        applyTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
+
+        toggle.addEventListener('click', () => {
+            const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
+    })();
+
     /* --- Pagina attiva nella nav --- */
     (function setActiveNav() {
         const page = window.location.pathname.split('/').pop() || 'index.html';
