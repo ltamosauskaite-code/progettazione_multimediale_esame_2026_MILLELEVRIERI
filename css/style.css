@@ -2241,7 +2241,7 @@ main h1,
 
 .site-footer {
     border-top: 1px solid var(--color-border);
-    padding: 2.5rem 2rem 1.5rem;
+    padding: 2.5rem var(--site-gutter) 1.5rem;
     color: var(--color-muted);
     background-color: var(--color-bg);
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -2251,7 +2251,14 @@ main h1,
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    max-width: var(--site-max);
+    width: 100%;
+    align-items: start;
+}
+
+.footer-col {
+    min-width: 0;
 }
 
 .footer-logo {
@@ -2272,6 +2279,8 @@ main h1,
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.875rem;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-contact {
@@ -2279,6 +2288,12 @@ main h1,
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.875rem;
+    min-width: 0;
+}
+
+.footer-contact a {
+    display: block;
+    overflow-wrap: anywhere;
 }
 
 .footer-social {
@@ -2286,19 +2301,17 @@ main h1,
     flex-direction: column;
     gap: 0.35rem;
     margin-top: 0.5rem;
+    padding: 0;
 }
 
 .footer-copy {
     font-size: 0.75rem;
     color: #9E9E9E;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--color-border);
     padding-top: 1rem;
-}
-
-footer {
-    border-top: 1px solid #000000;
-    padding: 1rem 2rem;
-    color: #9E9E9E;
+    max-width: var(--site-max);
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* --- Responsive --- */
@@ -2681,7 +2694,19 @@ footer {
 
     .footer-inner {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .footer-col,
+    .footer-nav,
+    .footer-contact {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-tagline {
+        max-width: none;
     }
 
     #hero-carousel .carousel-slide.featured-item {
@@ -2781,7 +2806,7 @@ footer {
     }
 
     .site-footer {
-        padding: 2rem 1.25rem 1.25rem;
+        padding: 2rem var(--site-gutter) 1.25rem;
     }
 
     .contatti-map {
@@ -2851,10 +2876,6 @@ footer {
         position: static;
         display: block;
         margin-bottom: 0.35rem;
-    }
-
-    footer {
-        padding: 1rem 1.25rem;
     }
 
     .home-bio-text,
@@ -3021,7 +3042,11 @@ footer {
     }
 
     .site-footer {
-        padding: 1.5rem 0.875rem 1rem;
+        padding: 1.5rem var(--site-gutter) 1rem;
+    }
+
+    .footer-inner {
+        gap: 1.75rem;
     }
 
     .footer-tagline {
