@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Home</title>
+        <meta name="description" content="Portfolio di Liepa Tamosauskaite — designer visiva tra identità, fotografia e sperimentazione digitale.">
+    <meta property="og:title" content="Millelevrieri — Portfolio">
+    <meta property="og:description" content="Design come cortocircuito visivo. Portfolio di Liepa Tamosauskaite.">
+    <meta property="og:image" content="img/bio-home.png">
+    <meta property="og:url" content="index.html">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <span class="header-logo"></span>
+        <a href="index.html" class="header-logo-link" aria-label="Millelevrieri — Home"><span class="header-logo"></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,12 +35,126 @@
         <span class="video-title video-title-black">Millelevrieri</span>
     </section>
     <main>
+        <section id="hero-carousel" class="carousel-home" aria-label="Progetti in evidenza">
+            <div class="section-header">
+                <span class="section-label">Progetti in evidenza</span>
+                <div class="carousel-toolbar">
+                    <span class="carousel-counter" id="carousel-counter" aria-live="polite">01 / 03</span>
+                    <div class="carousel-dots" role="tablist" aria-label="Seleziona slide"></div>
+                    <div class="carousel-nav">
+                        <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>
+                        <button type="button" class="carousel-btn carousel-next" aria-label="Slide successiva">→</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel featured-carousel">
+                <div class="carousel-track">
+                    <article class="carousel-slide featured-item is-active">
+                        <div class="featured-item-meta">
+                            <span class="featured-item-num">01</span>
+                            <h2 class="featured-item-title">Mirame</h2>
+                            <p class="featured-item-desc">Il voyeurismo come pattern visivo ossessivo — testo ripetuto, stratificato, che invade lo sguardo.</p>
+                            <a href="lavoro-2.html" class="featured-item-link">Vedi il lavoro →</a>
+                        </div>
+                        <div class="carousel-media featured-item-img-wrap">
+                            <img class="carousel-hero-img" src="img/lavoro-2.png" alt="Mirame — composizione voyeuristica">
+                        </div>
+                    </article>
+                    <article class="carousel-slide featured-item">
+                        <div class="featured-item-meta">
+                            <span class="featured-item-num">02</span>
+                            <h2 class="featured-item-title">Ferma il Tempo</h2>
+                            <p class="featured-item-desc">Locandina per evento musicale — tipografia manuale, fotografia e illustrazione in equilibrio.</p>
+                            <a href="lavoro-5.html" class="featured-item-link">Vedi il lavoro →</a>
+                        </div>
+                        <div class="carousel-media featured-item-img-wrap">
+                            <img class="carousel-hero-img" src="img/ferma-il-tempo.png" alt="Ferma il Tempo — locandina evento">
+                        </div>
+                    </article>
+                    <article class="carousel-slide featured-item">
+                        <div class="featured-item-meta">
+                            <span class="featured-item-num">03</span>
+                            <h2 class="featured-item-title">Live Meat</h2>
+                            <p class="featured-item-desc">Un volto decostruito tra algoritmi e mezzatinta — presenza e cancellazione nello stesso frame.</p>
+                            <a href="lavoro-6.html" class="featured-item-link">Vedi il lavoro →</a>
+                        </div>
+                        <div class="carousel-media featured-item-img-wrap">
+                            <img class="carousel-hero-img" src="img/live-meat.png" alt="Live Meat — volto decostruito">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="statement">
             <div class="statement-left">
                 <p class="statement-role">Designer visiva</p>
                 <h2 class="statement-heading">Esploratrice di spazi liminali.</h2>
             </div>
             <p class="statement-desc">Il mio processo creativo parte sempre da una tensione: il rapporto tra chi guarda e chi è guardato, tra la superficie e ciò che nasconde. Attraverso la sovrapposizione di texture e una gestione elettrica del colore, costruisco narrazioni che sfidano la percezione. I miei lavori sono frammenti di un'allucinazione digitale, pensati per chi non ha paura di guardare oltre la nitidezza. Credo che il design debba essere una vibrazione, un modo per dare corpo a quegli stati d'animo che le parole non riescono a definire.</p>
+        </section>
+
+        <section id="home-services">
+            <div class="section-header">
+                <span class="section-label">Cosa faccio</span>
+            </div>
+            <div class="services-grid">
+                <article class="service-item">
+                    <div class="service-illus" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="21"/>
+                            <path d="M23 41 L32 19 L41 41"/>
+                            <line x1="27" y1="34" x2="37" y2="34"/>
+                            <circle cx="46" cy="18" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Identità visiva</h3>
+                    <p>Logo, palette, tipografia e materiali per dare forma a un marchio riconoscibile.</p>
+                </article>
+                <article class="service-item">
+                    <div class="service-illus" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="9" width="34" height="46" rx="1"/>
+                            <line x1="21" y1="20" x2="43" y2="20"/>
+                            <line x1="21" y1="26" x2="39" y2="26"/>
+                            <line x1="21" y1="32" x2="43" y2="32"/>
+                            <line x1="21" y1="38" x2="35" y2="38"/>
+                            <line x1="21" y1="46" x2="43" y2="46"/>
+                        </svg>
+                    </div>
+                    <h3>Poster &amp; editorial</h3>
+                    <p>Locandine, layout e composizioni per eventi, campagne e progetti culturali.</p>
+                </article>
+                <article class="service-item">
+                    <div class="service-illus" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="11" y="18" width="42" height="30" rx="2"/>
+                            <circle cx="32" cy="33" r="11"/>
+                            <circle cx="32" cy="33" r="5"/>
+                            <path d="M24 18 L28 11 L36 11 L40 18"/>
+                            <circle cx="47" cy="23" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Fotografia</h3>
+                    <p>Ritratto, reportage e direzione creativa — dal concetto alla post-produzione.</p>
+                </article>
+                <article class="service-item">
+                    <div class="service-illus" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="14" width="44" height="36" rx="1"/>
+                            <polygon points="27,24 27,40 41,32"/>
+                            <line x1="10" y1="50" x2="54" y2="50"/>
+                            <line x1="16" y1="50" x2="16" y2="54"/>
+                            <line x1="24" y1="50" x2="24" y2="54"/>
+                            <line x1="32" y1="50" x2="32" y2="54"/>
+                            <line x1="40" y1="50" x2="40" y2="54"/>
+                            <line x1="48" y1="50" x2="48" y2="54"/>
+                        </svg>
+                    </div>
+                    <h3>Video &amp; motion</h3>
+                    <p>Riprese, montaggio e sperimentazione visiva per narrazioni in movimento.</p>
+                </article>
+            </div>
         </section>
 
         <section id="featured">
@@ -85,21 +205,103 @@
             </div>
         </section>
 
-        <section id="cta-home">
-            <p class="cta-phrase">Hai un progetto in mente?</p>
-            <h2 class="cta-title">Lavoriamo insieme.</h2>
-            <div class="cta-links">
-                <a href="contatti.html" class="cta-btn">Contatti</a>
-                <nav class="cta-socials" aria-label="Social links">
-                    <a href="mailto:liepa@millelevrieri.com">Email</a>
-                    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-                </nav>
+        <section id="home-cta-mid">
+            <p class="home-cta-mid-text">Ti interessa un progetto simile?</p>
+            <a href="contatti.html" class="home-cta-mid-link">Contattami →</a>
+        </section>
+
+        <section id="process-home">
+            <div class="process-home-inner">
+                <div class="section-header section-header-dark">
+                    <span class="section-label">Come lavoro</span>
+                </div>
+                <ol class="process-home-steps">
+                    <li>
+                        <span class="step-num-home">01</span>
+                        <h3>Briefing</h3>
+                        <p>Ascolto il progetto, i valori e il pubblico. Prima di toccare lo schermo, capisco cosa deve comunicare e a chi.</p>
+                    </li>
+                    <li>
+                        <span class="step-num-home">02</span>
+                        <h3>Ricerca</h3>
+                        <p>Raccoglo riferimenti visivi, analisi di mercato e contesto culturale. Il design non nasce nel vuoto.</p>
+                    </li>
+                    <li>
+                        <span class="step-num-home">03</span>
+                        <h3>Sviluppo</h3>
+                        <p>Sperimento, decostruisco e ricostruisco. Ogni scelta — tipografia, colore, composizione — è intenzionale.</p>
+                    </li>
+                    <li>
+                        <span class="step-num-home">04</span>
+                        <h3>Consegna</h3>
+                        <p>Rilascio materiali pronti all'uso: file vettoriali, mockup e guide stilistiche se necessario.</p>
+                    </li>
+                </ol>
             </div>
         </section>
+
+        <section id="home-bio">
+            <div class="home-bio-inner">
+                <a href="bio.html" class="home-bio-img-wrap">
+                    <img src="img/bio-home.png" alt="Liepa Tamosauskaite">
+                </a>
+                <div class="home-bio-text">
+                    <span class="section-label">Chi sono</span>
+                    <h2 class="home-bio-heading">Liepa Tamosauskaite</h2>
+                    <p class="home-bio-desc">Designer lituana, base a Roma. Mi muovo tra identità visiva, fotografia e sperimentazione digitale — con uno sguardo ibrido fatto di culture, lingue e sensibilità diverse.</p>
+                    <a href="bio.html" class="home-bio-link">Leggi la mia bio →</a>
+                    <a href="cv.pdf" class="home-bio-cv" download>Scarica il CV (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-home">
+            <div class="cta-inner">
+                <div class="cta-content">
+                    <span class="section-label">Contatti</span>
+                    <h2 class="cta-heading">Lavoriamo insieme</h2>
+                    <p class="cta-text">Hai un progetto in mente? Scrivimi — sono disponibile per collaborazioni, commissioni e progetti creativi.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contatti.html" class="cta-btn">Vai ai contatti →</a>
+                    <ul class="cta-socials">
+                        <li><a href="mailto:millelevrieri@gmail.com">Email</a></li>
+                        <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-levriero">
+            <img src="img/levriero-ink.png" alt="">
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2026 Liepa Tamosauskaite</p>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Millelevrieri</a>
+                <p class="footer-tagline">Design come cortocircuito visivo.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Navigazione footer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+                <a href="mailto:millelevrieri@gmail.com">millelevrieri@gmail.com</a>
+                <a href="tel:+393703466977">+39 370 346 6977</a>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Liepa Tamosauskaite — Tutti i diritti riservati</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

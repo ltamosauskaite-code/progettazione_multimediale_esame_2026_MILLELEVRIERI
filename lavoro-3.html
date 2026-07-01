@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Lavoro 3</title>
+        <meta name="description" content="Dettaglio progetto 3 — portfolio Millelevrieri di Liepa Tamosauskaite.">
+    <meta property="og:title" content="Millelevrieri — Lavoro 3">
+    <meta property="og:description" content="Case study di design visivo e fotografia.">
+    <meta property="og:image" content="img/bio-home.png">
+    <meta property="og:url" content="lavoro-3.html">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <a href="index.html" class="header-logo-link" aria-label="Millelevrieri — Home"><span class="header-logo"></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,18 +29,67 @@
         <section class="lavoro-detail">
             <h1>Lupi</h1>
             <div class="lavoro-content">
-                <img src="img/lavoro-3.png" alt="LT2">
+                <div class="lavoro-carousel carousel" aria-label="Galleria progetto">
+                    <div class="carousel-track">
+                        <figure class="carousel-slide is-active">
+                            <img src="img/lavoro-3.png" alt="Lupi — fotografia principale">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="img/grey.png" alt="Dettaglio luce e ombre">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="img/whippet.png" alt="Riferimento figurativo animale">
+                        </figure>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Slide precedente">←</button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Slide successiva">→</button>
+                    <div class="carousel-dots" role="tablist" aria-label="Seleziona slide"></div>
+                </div>
                 <div class="lavoro-desc">
                     <span class="desc-label">Descrizione</span>
                     <p>Questa fotografia cattura un momento di profonda intimità, caratterizzato da un'estetica cruda, quasi notturna. L'illuminazione è la protagonista indiscussa: una saturazione intensa di blu e viola trasforma l'ambiente in uno spazio sospeso, quasi ultraterreno.</p>
                     <p>L'inquadratura ravvicinata e il taglio deciso creano una sensazione di vicinanza fisica, come se lo spettatore stesse condividendo lo stesso spazio privato. Un'opera che gioca con il contrasto tra l'ordinario della quotidianità e la drammaticità estetica della luce.</p>
                 </div>
             </div>
+            
+            <section class="page-cta">
+                <h2>Interessato a un progetto simile?</h2>
+                <p>Scrivimi per una collaborazione o un preventivo personalizzato.</p>
+                <a href="contatti.html" class="page-cta-btn">Chiedi un preventivo →</a>
+            </section>
+
             <a class="back-link" href="portfolio.html">&larr; Torna ai lavori</a>
+
+            <div class="page-levriero">
+                <img src="img/levriero-ink.png" alt="">
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Liepa Tamosauskaite</p>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Millelevrieri</a>
+                <p class="footer-tagline">Design come cortocircuito visivo.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Navigazione footer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+                <a href="mailto:millelevrieri@gmail.com">millelevrieri@gmail.com</a>
+                <a href="tel:+393703466977">+39 370 346 6977</a>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Liepa Tamosauskaite — Tutti i diritti riservati</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

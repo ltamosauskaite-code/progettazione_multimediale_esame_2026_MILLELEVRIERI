@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Lavori</title>
+        <meta name="description" content="Selezione di lavori di design visivo, fotografia e video di Liepa Tamosauskaite.">
+    <meta property="og:title" content="Millelevrieri — Portfolio">
+    <meta property="og:description" content="Progetti selezionati di design e fotografia.">
+    <meta property="og:image" content="img/bio-home.png">
+    <meta property="og:url" content="portfolio.html">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <span class="header-logo">Millelevrieri</span>
+        <a href="index.html" class="header-logo-link" aria-label="Millelevrieri — Home"><span class="header-logo"></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,50 +30,93 @@
             <h1>Lavori</h1>
             <div class="portfolio-grid">
                 <article>
-                    <a href="lavoro-1.html">
-                        <img src="img/lavoro-1.png" alt="La mia città (non più mia)">
-                    </a>
+                    <figure>
+                        <a href="lavoro-1.html">
+                            <img src="img/lavoro-1.png" alt="La mia città (non più mia)">
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-1.html">La mia città (non più mia)</a></h2>
                 </article>
                 <article>
-                    <a href="lavoro-2.html">
-                        <img src="img/lavoro-2.png" alt="Mirame">
-                    </a>
+                    <figure>
+                        <a href="lavoro-2.html">
+                            <img src="img/lavoro-2.png" alt="Mirame">
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-2.html">Mirame</a></h2>
                 </article>
                 <article>
-                    <a href="lavoro-3.html">
-                        <img src="img/lavoro-3.png" alt="Lupi">
-                    </a>
+                    <figure>
+                        <a href="lavoro-3.html">
+                            <img src="img/lavoro-3.png" alt="Lupi">
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-3.html">Lupi</a></h2>
                 </article>
                 <article class="lavoro-video">
-                    <a href="lavoro-4.html" class="video-link">
-                        <div class="video-wrapper">
-                            <video autoplay muted loop playsinline>
-                                <source src="video/pieta.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </a>
+                    <figure>
+                        <a href="lavoro-4.html" class="video-link">
+                            <div class="vimeo-bg-wrap">
+                                <iframe src="https://player.vimeo.com/video/1200232513?background=1&autoplay=1&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen" title="Pietà"></iframe>
+                            </div>
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-4.html">Pietà</a></h2>
                 </article>
                 <article>
-                    <a href="lavoro-5.html">
-                        <img src="img/ferma-il-tempo.png" alt="Ferma il Tempo">
-                    </a>
+                    <figure>
+                        <a href="lavoro-5.html">
+                            <img src="img/ferma-il-tempo.png" alt="Ferma il Tempo">
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-5.html">Ferma il Tempo</a></h2>
                 </article>
                 <article>
-                    <a href="lavoro-6.html">
-                        <img src="img/live-meat.png" alt="Live Meat">
-                    </a>
+                    <figure>
+                        <a href="lavoro-6.html">
+                            <img src="img/live-meat.png" alt="Live Meat">
+                        </a>
+                    </figure>
                     <h2><a href="lavoro-6.html">Live Meat</a></h2>
                 </article>
             </div>
         </section>
+
+        <section class="page-cta">
+            <h2>Vuoi collaborare?</h2>
+            <p>Scrivimi per commissioni, progetti editoriali o identità visiva.</p>
+            <a href="contatti.html" class="page-cta-btn">Scrivimi →</a>
+        </section>
+
+        <div class="page-levriero">
+            <img src="img/levriero-ink.png" alt="">
+        </div>
     </main>
-    <footer>
-        <p><p>&copy; 2026</p>copy; 2026 Liepa Tamosauskaite</p>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Millelevrieri</a>
+                <p class="footer-tagline">Design come cortocircuito visivo.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Navigazione footer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+                <a href="mailto:millelevrieri@gmail.com">millelevrieri@gmail.com</a>
+                <a href="tel:+393703466977">+39 370 346 6977</a>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Liepa Tamosauskaite — Tutti i diritti riservati</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

@@ -16,7 +16,7 @@
                     '<p class="cookie-title cookie-title-light">Cookie.</p>' +
                 '</div>' +
                 '<div class="cookie-body">' +
-                    '<p class="cookie-text">Usiamo cookie tecnici per far funzionare il sito. Nessun dato viene condiviso con terze parti.</p>' +
+                    '<p class="cookie-text">Usiamo cookie tecnici per far funzionare il sito. Nessun dato viene condiviso con terze parti. <a href="privacy.html">Privacy Policy</a></p>' +
                     '<div class="cookie-actions">' +
                         '<button class="cookie-accept">Accetto</button>' +
                         '<button class="cookie-reject">Rifiuto</button>' +
@@ -101,6 +101,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const videoIntro = document.getElementById('video-intro');
+
+    /* --- Pagina attiva nella nav --- */
+    (function setActiveNav() {
+        const page = window.location.pathname.split('/').pop() || 'index.html';
+        const activeHref = page.startsWith('lavoro-') ? 'portfolio.html' : page;
+
+        document.querySelectorAll('header nav a').forEach(link => {
+            if (link.getAttribute('href') === activeHref) {
+                link.setAttribute('aria-current', 'page');
+                link.classList.add('active');
+            }
+        });
+    })();
 
     /* --- Hamburger menu --- */
     const navToggle = document.querySelector('.nav-toggle');
@@ -203,19 +216,22 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTitleScroll();
     }
 
-    // --- Lightbox immagini lavori ---
-    const lavoriImgs = document.querySelectorAll('.lavoro-detail img');
-    if (lavoriImgs.length > 0) {
+    // --- Lightbox immagini (bio, portfolio, lavori) ---
+    const lightboxTriggers = document.querySelectorAll('.lightbox-trigger, .lavoro-detail img, .bio-foto img, .portfolio-grid img');
+    if (lightboxTriggers.length > 0) {
         const overlay = document.createElement('div');
         overlay.className = 'lightbox-overlay';
         const lbImg = document.createElement('img');
         overlay.appendChild(lbImg);
         document.body.appendChild(overlay);
 
-        lavoriImgs.forEach(img => {
-            img.addEventListener('click', () => {
+        lightboxTriggers.forEach(img => {
+            img.classList.add('lightbox-trigger');
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 lbImg.src = img.src;
-                lbImg.alt = img.alt;
+                lbImg.alt = img.alt || '';
                 overlay.classList.add('active');
             });
         });
@@ -225,6 +241,78 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') overlay.classList.remove('active');
         });
     }
+
+    // --- Carousel (homepage e pagine lavoro) ---
+    document.querySelectorAll('.carousel, .featured-carousel').forEach(carousel => {
+        const root = carousel.closest('#hero-carousel') || carousel;
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dotsContainer = root.querySelector('.carousel-dots');
+        const counter = root.querySelector('.carousel-counter');
+        if (!slides.length || !dotsContainer) return;
+
+        let current = 0;
+        let timer = null;
+        const autoplayMs = 5000;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'carousel-dot';
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateDots() {
+            dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('is-active', i === current);
+            });
+        }
+
+        function updateCounter() {
+            if (!counter) return;
+            const num = String(current + 1).padStart(2, '0');
+            const total = String(slides.length).padStart(2, '0');
+            counter.textContent = `${num} / ${total}`;
+        }
+
+        function goTo(index) {
+            slides[current].classList.remove('is-active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('is-active');
+            updateDots();
+            updateCounter();
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            timer = setInterval(() => goTo(current + 1), autoplayMs);
+        }
+
+        function stopAutoplay() {
+            if (timer) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        root.querySelector('.carousel-prev')?.addEventListener('click', () => {
+            goTo(current - 1);
+            startAutoplay();
+        });
+
+        root.querySelector('.carousel-next')?.addEventListener('click', () => {
+            goTo(current + 1);
+            startAutoplay();
+        });
+
+        root.addEventListener('mouseenter', stopAutoplay);
+        root.addEventListener('mouseleave', startAutoplay);
+
+        updateDots();
+        updateCounter();
+        startAutoplay();
+    });
 
     // --- Video griglia portfolio: parte dal secondo 10 ---
     const gridVideo = document.querySelector('.video-wrapper video');

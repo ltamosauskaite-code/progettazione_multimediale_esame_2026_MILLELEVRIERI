@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Bio</title>
+        <meta name="description" content="Biografia di Liepa Tamosauskaite — percorso, competenze e visione del design visivo.">
+    <meta property="og:title" content="Millelevrieri — Bio">
+    <meta property="og:description" content="Storia professionale e visione creativa di Liepa Tamosauskaite.">
+    <meta property="og:image" content="img/bio-home.png">
+    <meta property="og:url" content="bio.html">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <span class="header-logo">Millelevrieri</span>
+        <a href="index.html" class="header-logo-link" aria-label="Millelevrieri — Home"><span class="header-logo"></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -49,10 +55,19 @@
 
         <section id="bio-foto-section">
             <div class="bio-foto">
-                <img class="bio-foto-main" src="img/bio-1.png" alt="Liepa">
+                <figure>
+                    <img class="bio-foto-main lightbox-trigger" src="img/bio-1.png" alt="Liepa Tamosauskaite — ritratto principale">
+                    <figcaption>Ritratto principale — identità e presenza</figcaption>
+                </figure>
                 <div class="bio-foto-side">
-                    <img src="img/bio-2.png" alt="Liepa">
-                    <img src="img/bio-3.png" alt="Liepa">
+                    <figure>
+                        <img class="lightbox-trigger" src="img/bio-2.png" alt="Liepa Tamosauskaite — dettaglio 1">
+                        <figcaption>Dettaglio — luce e composizione</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="lightbox-trigger" src="img/bio-3.png" alt="Liepa Tamosauskaite — dettaglio 2">
+                        <figcaption>Dettaglio — sguardo e gesto</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -69,9 +84,42 @@
                 <p>Uso colori saturi, primari — il rosso, il blu — che urlano visivamente, rompendo ogni equilibrio formale. Non cerco l'estetica perfetta, cerco l'energia grezza. Se guardi i miei lavori, non stai solo guardando della grafica: stai entrando nel mio modo di vedere le cose.</p>
             </div>
         </section>
+
+        <section class="page-cta">
+            <h2>Scopri i miei lavori</h2>
+            <p>Una selezione di progetti di design visivo, fotografia e video.</p>
+            <a href="portfolio.html" class="page-cta-btn">Vai al portfolio →</a>
+        </section>
+
+        <div class="page-levriero">
+            <img src="img/levriero-ink.png" alt="">
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2026 Liepa Tamosauskaite</p>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Millelevrieri</a>
+                <p class="footer-tagline">Design come cortocircuito visivo.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Navigazione footer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+                <a href="mailto:millelevrieri@gmail.com">millelevrieri@gmail.com</a>
+                <a href="tel:+393703466977">+39 370 346 6977</a>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Liepa Tamosauskaite — Tutti i diritti riservati</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

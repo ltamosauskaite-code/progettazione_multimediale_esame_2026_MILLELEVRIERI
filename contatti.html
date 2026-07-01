@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Contatti</title>
+    <meta name="description" content="Contatta Liepa Tamosauskaite per collaborazioni, commissioni e progetti creativi.">
+    <meta property="og:title" content="Millelevrieri — Contatti">
+    <meta property="og:description" content="Email, telefono e form di contatto.">
+    <meta property="og:image" content="img/bio-home.png">
+    <meta property="og:url" content="contatti.html">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <span class="header-logo">Millelevrieri</span>
+        <a href="index.html" class="header-logo-link" aria-label="Millelevrieri — Home"><span class="header-logo"></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,67 +28,109 @@
     <main>
         <section id="contatti" class="contatti-layout">
             <div class="contatti-content">
-            <h1>Contatti</h1>
-            <p>Per collaborazioni o richieste, scrivimi.</p>
+                <h1>Contatti</h1>
+                <p>Per collaborazioni o richieste, scrivimi. Rispondo di solito entro 48 ore lavorative.</p>
 
-            <ul class="contatti-social">
-                <li>
-                    <a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-                        </svg>
-                        <span>@millelevrieri</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://wa.me/393703466977" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill="none" stroke="currentColor" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-                            <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8.5 10.5c.5 1.5 2 3 3.5 3.5"/>
-                            <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M8 8.5s.5-.5 1 0l1 2-1 1s1 2 3 3l1-1 2 1c.5.5 0 1 0 1s-1.5 1-3 0C9.5 14 8 11 8 11"/>
-                        </svg>
-                        <span>+39 370 346 6977</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:millelevrieri@gmail.com">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <span>millelevrieri@gmail.com</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="7" cy="7" r="1.2" fill="currentColor"/>
-                            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M11 10v7M11 13c0-2 6-3 6 0v4"/>
-                        </svg>
-                        <span>Tamosauskaite Liepa</span>
-                    </a>
-                </li>
-            </ul>
+                <div class="contatti-info">
+                    <h2>Indirizzo</h2>
+                    <p>Roma, Italia</p>
+                    <h2>Orari</h2>
+                    <p>Lunedì — Venerdì, 10:00 — 18:00</p>
+                </div>
 
-            <form id="contact-form">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Messaggio</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Invia</button>
-            </form>
+                <ul class="contatti-social">
+                    <li>
+                        <a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+                            </svg>
+                            <span>@millelevrieri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/393703466977" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+                                <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8.5 10.5c.5 1.5 2 3 3.5 3.5"/>
+                                <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M8 8.5s.5-.5 1 0l1 2-1 1s1 2 3 3l1-1 2 1c.5.5 0 1 0 1s-1.5 1-3 0C9.5 14 8 11 8 11"/>
+                            </svg>
+                            <span>+39 370 346 6977</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:millelevrieri@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>millelevrieri@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="7" cy="7" r="1.2" fill="currentColor"/>
+                                <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M11 10v7M11 13c0-2 6-3 6 0v4"/>
+                            </svg>
+                            <span>Tamosauskaite Liepa</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <iframe class="contatti-map" title="Mappa — Roma" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118783.045!2d12.434!3d41.9028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928e53%3A0x28f1c82e9085032a!2sRoma%20RM!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="surname">Cognome</label>
+                    <input type="text" id="surname" name="surname" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Telefono (opzionale)</label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="subject">Oggetto</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <label class="form-privacy">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <span>Accetto la <a href="privacy.html">Privacy Policy</a> e autorizzo il trattamento dei dati personali.</span>
+                    </label>
+                    <button type="submit">Invia</button>
+                </form>
             </div>
             <img src="img/grey.png" alt="Levriero" class="contatti-img">
         </section>
     </main>
-    <footer>
-        <p><p>&copy; 2026</p>copy; 2026 Liepa Tamosauskaite</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Millelevrieri</a>
+                <p class="footer-tagline">Design come cortocircuito visivo.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Navigazione footer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+                <a href="mailto:millelevrieri@gmail.com">millelevrieri@gmail.com</a>
+                <a href="tel:+393703466977">+39 370 346 6977</a>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/millelevrieri" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/liepa-tamosauskaite" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Liepa Tamosauskaite — Tutti i diritti riservati</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

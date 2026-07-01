@@ -149,6 +149,12 @@ table {
     padding-top: 1rem;
 }
 
+.cookie-text a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .cookie-text {
     font-size: 0.65rem;
     line-height: 1.7;
@@ -206,11 +212,35 @@ table {
 body {
     font-family: 'Fragment Mono', monospace;
     font-style: normal;
+    font-size: 1rem;
     background-color: #FFFFFF;
     color: #000000;
     line-height: 1.6;
     cursor: url('../img/cursor-star.svg') 16 16, auto;
     overflow-x: clip;
+}
+
+p,
+.statement-desc,
+.featured-item-desc,
+.featured-intro,
+.service-item p,
+.lavoro-desc p,
+.lavoro-raw-text p,
+.lavoro-note p,
+.bio-intro-text p,
+.bio-design-text p,
+.home-bio-desc,
+.cta-text,
+.home-contact-intro,
+.contatti-content p,
+.contatti-info p,
+.privacy-page p,
+.page-cta p,
+.process-home-steps p,
+.bio-info-list li {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 img {
@@ -261,6 +291,23 @@ nav ul {
     display: flex;
     gap: 1rem;
     font-size: 0.75rem;
+}
+
+header nav a {
+    font-size: 0.75rem;
+}
+
+nav a[aria-current="page"],
+nav a.active {
+    color: #FF0000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.header-logo-link {
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
 }
 
 /* --- Hamburger button (desktop: hidden) --- */
@@ -428,6 +475,63 @@ main {
     letter-spacing: 0.05em;
 }
 
+/* --- Home services --- */
+
+#home-services {
+    padding: 4rem 0;
+    border-bottom: 1px solid #000000;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.service-item {
+    padding: 1.75rem 1.5rem;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.service-illus {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.service-illus svg {
+    width: 72px;
+    height: 72px;
+    stroke: #000000;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.35s ease;
+}
+
+.service-item:hover .service-illus svg {
+    stroke: #FF0000;
+}
+
+.service-item h3 {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.service-item p {
+    font-size: 0.68rem;
+    line-height: 1.65;
+    color: #565656;
+}
+
 /* --- Featured projects --- */
 
 #featured {
@@ -531,44 +635,214 @@ main {
     filter: grayscale(0%);
 }
 
-.pro
+/* --- Micro CTA --- */
+
+#home-cta-mid {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-cta-mid-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #565656;
+}
+
+.home-cta-mid-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.home-cta-mid-link:hover {
+    color: #FF0000;
+}
+
+/* --- Process (landing) --- */
+
+#process-home {
+    background: #000000;
+    color: #FFFFFF;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 5rem 0;
+}
+
+.process-home-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header-dark .section-label {
+    color: #565656;
+}
+
+.process-home-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid #565656;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+.process-home-steps li {
+    padding: 2rem 1.25rem 2.5rem;
+    border-right: 1px solid #565656;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.process-home-steps li:last-child {
+    border-right: none;
+}
+
+.step-num-home {
+    font-family: 'BillaMount', sans-serif;
+    font-size: clamp(40px, 4.5vw, 56px);
+    line-height: 1;
+    color: #FFFFFF;
+    display: block;
+}
+
+.process-home-steps h3 {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.process-home-steps p {
+    font-size: 0.68rem;
+    color: #9E9E9E;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+/* --- Home bio teaser --- */
+
+#home-bio {
+    padding: 6rem 0 7rem;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.home-bio-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.home-bio-img-wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.home-bio-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    filter: sepia(1) saturate(8) hue-rotate(338deg) brightness(0.88);
+    transition: filter 0.5s ease;
+}
+
+.home-bio-img-wrap:hover img {
+    filter: sepia(1) saturate(10) hue-rotate(338deg) brightness(0.95);
+}
+
+.home-bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 520px;
+    padding-top: 0.5rem;
+}
+
+.home-bio-heading {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.home-bio-desc {
+    font-size: 0.75rem;
+    line-height: 1.75;
+    color: #565656;
+    max-width: 480px;
+}
+
+.home-bio-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: #000000;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.home-bio-link:hover {
+    color: #FF0000;
+}
 
 /* --- CTA home --- */
 
 #cta-home {
-    padding: 7rem 0 5rem;
-    text-align: center;
+    padding: 4rem 0 5rem;
 }
 
-.cta-phrase {
-    font-size: 0.7rem;
-    color: #9E9E9E;
-    letter-spacing: 0.1em;
+.cta-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: end;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-heading {
+    font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+    line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.cta-title {
-    font-family: 'BillaMount', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 1;
-    margin-bottom: 3rem;
     color: #000000;
 }
 
-.cta-links {
+.cta-text {
+    font-size: 0.75rem;
+    line-height: 1.75;
+    color: #565656;
+    max-width: 420px;
+}
+
+.cta-actions {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 1.25rem;
 }
 
 .cta-btn {
     display: inline-block;
     border: 1px solid #000000;
-    padding: 0.75rem 2.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.7rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #000000;
@@ -581,12 +855,14 @@ main {
 
 .cta-socials {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
     font-size: 0.7rem;
+    list-style: none;
 }
 
 .cta-socials a {
-    color: #9E9E9E;
+    color: #565656;
 }
 
 .cta-socials a:hover {
@@ -1131,6 +1407,13 @@ main {
     gap: 1rem;
 }
 
+.bio-foto-side figure {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .bio-foto-side img {
     display: block;
     width: 100%;
@@ -1347,9 +1630,9 @@ main {
     color: #565656;
 }
 
-/* --- Levriero di fondo --- */
+/* --- Levriero di fondo pagina --- */
 
-.lavoro-levriero {
+.page-levriero {
     margin-top: 6rem;
     display: flex;
     justify-content: center;
@@ -1358,7 +1641,7 @@ main {
     user-select: none;
 }
 
-.lavoro-levriero img {
+.page-levriero img {
     width: clamp(280px, 50%, 520px);
     display: block;
 }
@@ -1398,11 +1681,481 @@ main {
     display: block;
 }
 
-.lavoro-detail img {
+.lavoro-detail img,
+.lightbox-trigger {
     cursor: url('../img/cursor-star.svg') 16 16, zoom-in;
 }
 
+/* --- Carousel --- */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+}
+
+#hero-carousel {
+    padding: 0 0 4rem;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 0;
+}
+
+.carousel-home .section-header {
+    margin-bottom: 0;
+}
+
+.carousel-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.carousel-counter {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: #9E9E9E;
+    min-width: 4.5rem;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.featured-carousel {
+    position: relative;
+    border-top: 1px solid #000000;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.featured-carousel .carousel-track {
+    position: relative;
+    min-height: 440px;
+}
+
+#hero-carousel .carousel-slide.featured-item {
+    position: absolute;
+    inset: 0;
+    min-height: 440px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#hero-carousel .carousel-slide.featured-item.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 440px;
+    background: #FFFFFF;
+}
+
+.carousel-media .carousel-hero-img {
+    width: auto;
+    height: 100%;
+    max-height: 440px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+
+.carousel-home:hover .carousel-slide.is-active .carousel-hero-img {
+    filter: grayscale(0%);
+}
+
+#hero-carousel .carousel-dots {
+    position: static;
+    transform: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#hero-carousel .carousel-dot {
+    border-color: #000000;
+}
+
+#hero-carousel .carousel-dot.is-active {
+    background: #FF0000;
+    border-color: #FF0000;
+}
+
+#hero-carousel .carousel-btn {
+    position: static;
+    transform: none;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+}
+
+.lavoro-carousel {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+    border: 1px solid #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.lavoro-carousel .carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.lavoro-carousel .carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.lavoro-carousel .carousel-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lavoro-carousel .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    color: #000000;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background: #FF0000;
+    color: #FFFFFF;
+    border-color: #FF0000;
+}
+
+.carousel-prev { left: 1rem; }
+.carousel-next { right: 1rem; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-dot.is-active {
+    background: #FF0000;
+    border-color: #FF0000;
+}
+
+.lavoro-carousel .carousel-dots {
+    bottom: 0.75rem;
+}
+
+.lavoro-carousel .carousel-dot {
+    border-color: #000000;
+}
+
+.lavoro-carousel .carousel-dot.is-active {
+    background: #FF0000;
+    border-color: #FF0000;
+}
+
+/* --- Forms condivisi --- */
+
+.contact-form,
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.contact-form label:not(.form-privacy),
+#contact-form label:not(.form-privacy) {
+    font-style: italic;
+    color: #565656;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form textarea,
+.contact-form select,
+#contact-form input:not([type="checkbox"]),
+#contact-form textarea {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+}
+
+.contact-form textarea,
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button,
+#contact-form button {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 1rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.contact-form button:hover,
+#contact-form button:hover {
+    background-color: #FF0000;
+}
+
+.form-privacy {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    column-gap: 0.75rem;
+    row-gap: 0;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-style: normal;
+    color: #565656;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.form-privacy input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.2rem 0 0;
+    padding: 0;
+    border: 1px solid #000000;
+    accent-color: #000000;
+    cursor: pointer;
+}
+
+.form-privacy span {
+    display: block;
+}
+
+.form-privacy a {
+    color: #000000;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.form-privacy a:hover {
+    color: #FF0000;
+}
+
+#home-contact {
+    padding: 4rem 0;
+    border-top: 1px solid #000000;
+}
+
+#home-contact h2 {
+    margin-bottom: 0.75rem;
+}
+
+.home-contact-intro {
+    margin-bottom: 2rem;
+    color: #565656;
+}
+
+.home-bio-cv {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* --- CTA pagine --- */
+
+.page-cta {
+    margin: 4rem 0 2rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.page-cta h2 {
+    margin-bottom: 0.75rem;
+}
+
+.page-cta p {
+    margin-bottom: 1.25rem;
+    color: #565656;
+    max-width: 560px;
+}
+
+.page-cta-btn {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* --- Privacy page --- */
+
+.privacy-page {
+    max-width: 720px;
+}
+
+.privacy-page h1 {
+    margin-bottom: 2rem;
+}
+
+.privacy-page h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-page p {
+    margin-bottom: 1rem;
+    color: #565656;
+}
+
+/* --- Contatti extra --- */
+
+.contatti-info {
+    margin-bottom: 2rem;
+}
+
+.contatti-info h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contatti-map {
+    width: 100%;
+    height: 280px;
+    border: 1px solid #000000;
+    margin: 2rem 0;
+}
+
+.portfolio-grid figure {
+    margin: 0;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-grid figure > a {
+    display: block;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.portfolio-grid .vimeo-bg-wrap {
+    height: 100%;
+    min-height: 0;
+}
+
+.portfolio-grid article:hover .vimeo-bg-wrap iframe {
+    filter: grayscale(0%);
+}
+
+.bio-foto figure {
+    margin: 0;
+}
+
+.bio-foto figcaption {
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #565656;
+    font-style: italic;
+}
+
 /* --- Footer --- */
+
+.site-footer {
+    border-top: 1px solid #000000;
+    padding: 2.5rem 2rem 1.5rem;
+    color: #565656;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: block;
+    color: #000000;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.footer-tagline {
+    font-size: 0.875rem;
+    color: #9E9E9E;
+    max-width: 240px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #9E9E9E;
+    border-top: 1px solid #000000;
+    padding-top: 1rem;
+}
 
 footer {
     border-top: 1px solid #000000;
@@ -1447,25 +2200,24 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    .process-home-steps {
+    .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .process-home-steps li:nth-child(2) {
-        border-right: none;
-        padding-right: 0;
+    .process-home-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .process-home-steps li:nth-child(3) {
-        border-top: 1px solid #565656;
-        padding-top: 2rem;
+    .process-home-steps li {
+        padding: 1.75rem 1.25rem 2rem;
     }
 
-    .process-home-steps li:nth-child(4) {
-        border-top: 1px solid #565656;
+    .process-home-steps li:nth-child(2n) {
         border-right: none;
-        padding-top: 2rem;
-        padding-right: 0;
+    }
+
+    .process-home-steps li:nth-child(n + 3) {
+        border-top: 1px solid #565656;
     }
 
     .bio-intro {
@@ -1663,7 +2415,7 @@ footer {
     .process-home-steps li {
         border-right: none;
         border-top: 1px solid #565656;
-        padding: 1.5rem 0;
+        padding: 1.75rem 0 2rem;
     }
 
     .process-home-steps li:first-child {
@@ -1672,11 +2424,34 @@ footer {
     }
 
     .step-num-home {
-        font-size: 56px;
+        font-size: 48px;
     }
 
-    .cta-title {
-        font-size: clamp(2.5rem, 10vw, 4rem);
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #home-cta-mid {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .home-bio-inner {
+        gap: 2.5rem;
+    }
+
+    #home-bio {
+        padding: 4rem 0 5rem;
+    }
+
+    .cta-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cta-actions {
+        align-items: flex-start;
     }
 
     .portfolio-grid article {
@@ -1696,6 +2471,34 @@ footer {
 
     #contact-form {
         max-width: 100%;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #hero-carousel .carousel-slide.featured-item {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    .featured-carousel .carousel-track {
+        min-height: unset;
+    }
+
+    .carousel-media {
+        min-height: 320px;
+        border-top: 1px solid #000000;
+    }
+
+    .carousel-media .carousel-hero-img {
+        max-height: 320px;
+    }
+
+    .carousel-toolbar {
+        flex-wrap: wrap;
+        gap: 0.75rem;
     }
 }
 
